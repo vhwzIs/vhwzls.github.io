@@ -8,7 +8,6 @@ items:
     title_ref: https://bangumi.tv/subject/395378
     image:
       src: https://bkimg.cdn.bcebos.com/pic/d439b6003af33a87e950ef41ac0407385343fbf21f6d?x-bce-process=image/format,f_auto/quality,Q_70/resize,m_lfit,limit_1,w_536
-      alt: sand
     description: 迷宫饭
 
   - title: 你想活出怎样的人生 
