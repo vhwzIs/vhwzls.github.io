@@ -14,3 +14,58 @@
   width: 100px;
   height: auto;
 }
+
+.kanban-container {
+  // display: inline-block;
+  // /* display: flex; */
+  // justify-content: center;
+  // margin: 10px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+.myboard {
+  display: inline-block;
+  // display: flex;
+  justify-content: center;
+
+  width: 250px;
+  height: 350px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 设置阴影样式 */
+  padding: 10px; /* 设置内边距 */
+  position: relative; /* 设置看板元素为相对定位 */
+  align-items: center;
+  overflow: hidden;
+  
+}
+
+.kanbanimg {
+  min-width: 250px;
+  width: 100%;
+  max-width: 250px; /* Limit the image width to fit within the myboard element */
+  max-height: 250px; /* Limit the image height to fit within the myboard element */
+
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+  object-fit: contain;
+}
+
+.kanbantitle {
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.kanbandescription {
+  margin-top: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}

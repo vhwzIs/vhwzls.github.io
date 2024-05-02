@@ -11,8 +11,30 @@ layout: default
     <h1 class="dynamic-title">
       {{ title }}
     </h1>
-    {% for item in page.items %}
-    <div class="work-item">
+
+    <div class="kanban-container"> 
+      {% for item in page.items %}
+      <div class="myboard">
+        <img
+            src="{{ item.image.src | absolute_url }}"
+            class="kanbanimg"
+        />
+        <div class="kanbantitle">
+          {% if item.title_ref %}
+            <a href="{{ item.title_ref }}">{{ item.title }}</a>
+          {% else %}
+            {{ item.title }}
+          {% endif %}
+        </div>
+        <div class="kanbandescription">{{ item.description }}</div>
+
+      </div>
+      {% endfor %}
+    </div>
+    
+      
+
+    <!-- <div class="work-item">
       <img
         src="{{ item.image.src | absolute_url }}"
         class="work-bubble"
@@ -22,8 +44,8 @@ layout: default
         &mdash;
         {{ item.description }}
       </span>
-    </div>
-    {% endfor %}
+    </div> -->
+    
     <div class="content">
       {{ content }}
     </div>
